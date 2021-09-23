@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Pwsh command
+          run: Write-Host ${env:TOKEN}
+          env:
+            PREBUILD_TOKEN: ${{ secrets.TOKEN }}
+          shell: pwsh
